@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Disappearing Photos</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        font-size: 14px;
+        margin: 12px;
+        min-width: 220px;
+      }
+      h1 {
+        font-size: 16px;
+        margin: 0 0 8px;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin: 8px 0;
+      }
+      #ttlRow {
+        margin: 4px 0 10px;
+      }
+      #ttlSeconds {
+        width: 80px;
+      }
+      button {
+        padding: 4px 10px;
+        cursor: pointer;
+      }
+      #status {
+        margin-top: 6px;
+        font-size: 12px;
+        color: #008000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Disappearing Photos</h1>
+
+    <label>
+      <input type="checkbox" id="enabled" />
+      Enable disappearing photos
+    </label>
+
+    <div id="ttlRow">
+      <label>
+        TTL (seconds):
+        <input type="number" id="ttlSeconds" min="1" max="86400" />
+      </label>
+    </div>
+
+    <button id="save">Save</button>
+    <p id="status"></p>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

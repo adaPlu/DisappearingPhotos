@@ -1,0 +1,34 @@
+{
+  "name": "AI Stealth: Take Home Challenge",
+  "version": "1.0.0",
+  "manifest_version": 3,
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_title": "AI Stealth: Disappearing Photos",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": ["storage"],
+
+  "host_permissions": ["https://web.telegram.org/*"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://web.telegram.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": ["https://web.telegram.org/*"]
+    }
+  ]
+}
