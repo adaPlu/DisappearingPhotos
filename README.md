@@ -62,5 +62,6 @@ When you click \*\*Save\*\*:
 
 No page reload is required; changes apply to the next outgoing photo that Telegram Web A sends.
 
+## License
 
-
+Original project source code is licensed under the [MIT License](LICENSE). The separate [LICENSE-SCOPE.md](LICENSE-SCOPE.md) clarifies exclusions for personal or third-party materials.
